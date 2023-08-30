@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://local.cjdhyv98eoki.ap-northeast-2.rds.amazonaws.com:3306/study?autoReconnection=true;sendStringParametersAsUnicode=false?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+
+    username: admin
+    password: helloworld
+
+  jpa:
+    database: mysql
+    hibernate: # hibernate 사용 설정
+      ddl-auto: create
+    properties: # property 사용 설정
+      hibernate: # hibernate property 설정
+        format_sql: true
+        use_sql_comments: true
+
+logging:
+  level:
+    org.hibernate.sql: debug
+    org.hibernate.type: trace
